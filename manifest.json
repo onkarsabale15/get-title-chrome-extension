@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Title Fetch - Task",
+    "version": "1.0",
+    "permissions": [
+      "activeTab"
+    ],
+    "action": {
+      "default_popup": "index.html",
+      "default_icon": {
+        "16": "10197937.png",
+        "48": "10197937.png",
+        "128": "10197937.png"
+      }
+    },
+    "icons": {
+      "16": "10197937.png",
+      "48": "10197937.png",
+      "128": "10197937.png"
+    }
+  }  
