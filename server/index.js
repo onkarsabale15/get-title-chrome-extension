@@ -3,6 +3,7 @@ const app = Express();
 const routes = require("./route/index")
 const cors = require("cors")
 const sequelize = require("./db")
+const env = require("dotenv").config()
 //middlewares
 app.use(Express.json());
 app.use(Express.urlencoded({ extended: true }));
