@@ -1,17 +1,36 @@
 {
-    "manifest_version": 3,
-    "name": "Title Fetch - Task",
-    "version": "1.0",
-    "permissions": [
-      "activeTab"
-    ],
-    "action": {
-      "default_popup": "index.html",
-      "default_icon": {
-        "128": "10197937.png"
-      }
-    },
-    "icons": {
+  "manifest_version": 3,
+  "name": "Title Fetch - Task",
+  "version": "1.0",
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "scripting",
+    "webNavigation"
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
       "128": "10197937.png"
     }
-  }  
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.linkedin.com/in/*"
+      ],
+      "js": [
+        "background.js"
+      ]
+    }
+  ],
+  "host_permissions": [
+    "https://www.linkedin.com/*"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "icons": {
+    "128": "10197937.png"
+  }
+}
